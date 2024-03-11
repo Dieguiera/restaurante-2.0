@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>src="script.js"</script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="error" class="error-modal">
+        <p>Insira um nome para começar</p>
+        <br>
+        <button class="error-btn" onclick="fechar()"></button>
+    </div>
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary">Menu</button>
+        <button type="button" class="btn btn-primary">Cardápio</button>
+        <button type="button" class="btn btn-primary">Pedido</button>
+    </div>
+    <h1>Pedido</h1>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">nome</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Insira seu nome">
+      </div>
+    <button type="button" class="btn btn-outline-dark" onclick="comecar()">Começar</button>
+
+    <div id="selects-div">
+        <h2>Olá <span id="nomePrint"></span>, vamos começar seu pedido</h2>
+        <h3>Pratos</h3>
+        <select class="form-select" aria-label="Default select example" id="selectPrato">
+            <option selected>Selecione um prato</option>
+            <option value="Cheese bacon">Cheese bacon</option>
+            <option value="Carbonara">Carbonara</option>
+            <option value="Mac n' Cheese">Mac n' Cheese</option>
+          </select>
+          <h3>Bebidas</h3>
+          <select class="form-select" aria-label="Default select example" id="selectBebidas">
+              <option selected>Selecione um prato</option>
+              <option value="Gin n Juice">Gin n Juice</option>
+              <option value="Coca Cola">Coca Cola</option>
+              <option value="Cappuccino">Cappuccino</option>
+            </select>
+            <h3>Sobremesas</h3>
+            <select class="form-select" aria-label="Default select example" id="selectSobremesas">
+                <option selected>Selecione um prato</option>
+                <option value="Churros">Churros</option>
+                <option value="Bolo de Chocolate">Bolo de Chocolate</option>
+                <option value="Brownie com Sorvete">Brownie com Sorvete</option>
+              </select>
+              <div>
+                <button class="btn btn-sucess" onclick="calcularTotal()">Fazer Pedido</button>
+                <button class="btn btn-outline-secondary" type="button" onclick="limpar()">Limpar</button>
+              </div>
+              <div>
+                <span class="badge bg-primary">Total:</span>
+                <span class="badge bg-secondary">Resultado</span>
+              </div>
+    </div>
+</body>
+</html>
